@@ -2,22 +2,25 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        LinkedList<String> skor = new LinkedList<String>();
+        LinkedList<Integer> list = new LinkedList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+        list.add(6);
 
-        skor.add("шла");
-        skor.add("Саша");
-        skor.add("по");
-        skor.add("шоссе");
-        skor.add("и");
-        skor.add("сосала");
-        skor.add("сушку");
+        System.out.println(list);
 
-        System.out.println(skor);
+        int summ = 0;
 
-        Iterator x = skor.descendingIterator();
-        while (x.hasNext()) {
-            System.out.print(x.next() + " ");
+        Iterator<Integer> iterator = list.iterator();
+        while (iterator.hasNext()){
+            Integer integer = iterator.next();
+            summ += integer;
         }
+        System.out.print(summ);
+
 
     }
 
