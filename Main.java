@@ -2,24 +2,27 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        LinkedList<Integer> list = new LinkedList<>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        list.add(4);
-        list.add(5);
-        list.add(6);
+        LinkedList<String> mass = new LinkedList<>();
+        mass.add("каждый");
+        mass.add("охотник");
+        mass.add("желает");
+        mass.add("знать");
+        mass.add("где");
+        mass.add("сидит");
+        mass.add("фазан");
 
-        System.out.println(list);
+        System.out.println(mass);
 
-        int summ = 0;
+        mass.addLast("!");
+        System.out.println(mass);
 
-        Iterator<Integer> iterator = list.iterator();
-        while (iterator.hasNext()){
-            Integer integer = iterator.next();
-            summ += integer;
-        }
-        System.out.print(summ);
+        mass.remove(0);
+        System.out.println(mass);
+
+        System.out.println(mass.peekFirst());
+
+
+
 
 
     }
